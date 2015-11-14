@@ -1,0 +1,171 @@
+<?php
+/**
+*
+* Youtube Videos Gallery extension for the phpBB Forum Software package.
+* German translation by edualla
+*
+* @copyright (c) 2015 dmzx <http://www.dmzx-web.net> & _Vinny_ <http://www.suportephpbb.com.br>
+* @license GNU General Public License, version 2 (GPL-2.0)
+*
+*/
+
+/**
+* DO NOT CHANGE
+*/
+if (!defined('IN_PHPBB'))
+{
+	exit;
+}
+
+if (empty($lang) || !is_array($lang))
+{
+	$lang = array();
+}
+
+// DEVELOPERS PLEASE NOTE
+//
+// All language files should use UTF-8 as their encoding and the files must not contain a BOM.
+//
+// Placeholders can now contain order information, e.g. instead of
+// 'Page %s of %s' you can (and should) write 'Page %1$s of %2$s', this allows
+// translators to re-order the output of data while ensuring it remains correct
+//
+// You do not need this where single placeholders are used, e.g. 'Message %d' is fine
+// equally where a string contains only two placeholders which are used to wrap text
+// in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
+//
+// Some characters you may want to copy&paste:
+// ’ « » “ ” …
+//
+
+$lang = array_merge($lang, array(
+	'VIDEO_INDEX'			=> 'Video-Galerie',
+	'VIDEO_SELECT_CAT'		=> 'Wähle eine Kategorie aus',
+	'VIDEO_SUBMIT'			=> 'Neues Video',
+	'VIDEO_URL'				=> 'Gib eine Video-URL ein',
+	'VIDEO_URL_EXPLAIN'		=> '',
+	'VIDEOS_TIP'			=> 'Hilfe und Vorschläge',
+	'VIDEOS_TIPS_PART_01'			=> 'Gehe zu <a href="https://www.youtube.com/"> Youtube.com </a> und wähle ein Video, das Du mögest.',
+	'VIDEOS_TIPS_PART_02'			=> 'Kopiere das Video-URL, füge es in das Feld unten ein und klicke auf "Senden".',
+	'VIDEOS_TIPS_PART_03'			=> 'Links werden akzeptiert von <strong>youtube.com</strong> und <strong>youtu.be</strong>, sowie Erweiterungen.',
+	'VIDEOS_TIPS_PART_04'			=> 'Achtung',
+	'VIDEOS_TIPS_PART_05'			=> 'Diese Seite ist nicht für Download der Videos von Youtube!',
+	'VIDEO_UNAUTHED'		=> 'Du bist nicht berechtigt dieses Video anzusehen.',
+	'INVALID_VIDEO'			=> 'Das ausgewählte Video ist nicht vorhanden.',
+	'VIDEO'					=> 'Videos',
+	'VIDEO_EXPLAIN'			=> 'Galerie anzeigen von Youtube-Videos',
+	'VIEW_CAT'				=> 'Kategorie anzeigen',
+	'VIEW_VIDEO'			=> 'Video anschauen',
+	'VIDEO_CAT'				=> 'Kategorie',
+	'VIDEO_CATS'			=> 'Kategorien',
+	'VIDEO_CREATED'			=> 'Dieses Video wurde erfolgreich hinzugefügt.',
+	'VIDEO_DATE'			=> 'Datum',
+	'VIDEO_DELETE'			=> 'Video Löschen',
+	'VIDEO_DELETED'			=> 'Dieses Video wurde erfolgreich gelöscht.',
+	'PAGE_RETURN'			=> '%sZurück zur Video-Seite%s',
+	'COMMENTS'				=> 'Kommentare',
+	'POST_COMMENT'			=> 'Hinterlasse einen Kommentar',
+	'COMMENT_CREATED'		=> 'Dein Kommentar wurde erfolgreich hinzugefügt.',
+	'VIDEO_CMNT_SUBMIT'		=> 'Einen neuen Kommentar hinzufügen',
+	'NO_VIDEOS_COMMENTS'	=> 'Es gibt keine Kommentare zu diesem Video',
+	'VIDEO_COMMENT'			=> 'Kommentar',
+	'VIDEO_COMMENTS'		=> 'Kommentare',
+	'COMMENT_DELETED_SUCCESS'	=> 'Kommentar erfolgreich gelöscht.',
+	'DELETE_COMMENT_CONFIRM'	=> 'Bist Du sicher, dass Du den Kommentar löschen möchtest?',
+	'DELETE_VIDEO'			=> 'Bist Du sicher, dass Du dieses Video löschen möchtest?',
+	'MY_VIDEOS'				=> 'Meine Videos anzeigen',
+	'NEED_VIDEO_URL'		=> 'Du musst eine <strong>url</strong> für dieses Video angeben.',
+	'NEWEST_VIDEOS'			=> 'Neueste Videos',
+	'NO_VIDEOS'				=> 'Diese Seite hat keine Videos.',
+	'NO_CAT_VIDEOS'			=> 'Diese Kategorie hat keine Videos.',
+	'NO_USER_VIDEOS'		=> 'Dieser Benutzer hat keine Videos hochgeladen, oder nicht vorhanden.',
+	'NO_CATEGORIES'			=> 'Dieses Seite hat keine Kategorien',
+	'NO_TITLE'				=> 'Seite verfügt nicht über einen Namen.',
+	'RETURN_TO_VIDEO_INDEX' => 'Zurück zur Video-Galerie',
+	'SEARCH_VIDEOS'			=> 'Videos suchen',
+	'TOTAL_CATEGORIES_OTHER'=> 'Anzahl der Kategorien <strong>%d</strong>',
+	'TOTAL_CATEGORY_ZERO'	=> 'Anzahl der Kategorien <strong>0</strong>',
+	'TOTAL_VIDEOS'			=> 'Anzahl der Videos',
+	'TOTAL_VIDEOS_OTHER'	=> 'Anzahl der Videos <strong>%d</strong>',
+	'TOTAL_VIDEO_ZERO'		=> 'Anzahl der Videos <strong>0</strong>',
+	'TOTAL_VIEWS_OTHER'		=> 'Angesehen <strong>%d</strong>',
+	'TOTAL_VIEW_ZERO'		=> 'Ansichten <strong>0</strong>',
+	'TOTAL_COMMENTS_OTHER'	=> 'Kommentare <strong>%d</strong>',
+	'TOTAL_COMMENT_ZERO'	=> 'Kommentare <strong>0</strong>',
+	'USER_VIDEOS'			=> 'Benutzer-Videos suchen',
+	'NO_KEY_ADMIN'			=> 'Um die Videogallery zu verwenden, ist es erforderlich <strong>Google Public API key</strong> einzurichten, gehe zu Adminpanel und folge den Anweisungen.',
+	'NO_KEY_USER'			=> 'Sehr geehrter Nutzer, die Galerie steht nicht zur Verfügung. Bitte komme später wieder.',
+	'COMMENTS_DISABLED'		=> 'Kommentare sind deaktiviert.',
+	'DELETE_COMMENT'		=> 'Kommentare löschen',
+
+	// ACP
+	'ACP_VIDEO'						=> 'Video-Galerie',
+	'ACP_VIDEO_EXPLAIN'				=> '',
+	'ACP_VIDEO_SETTINGS'			=> 'Video Einstellungen',
+	'ACP_VIDEO_GENERAL_SETTINGS'	=> 'Allgemeine Einstellungen',
+	'ACP_VIDEO_ENABLE'				=> 'Videos-Seite aktivieren',
+	'ACP_VIDEO_CATEGORY'			=> 'Video-Kategorien',
+	'ACP_VIDEO_HEIGHT'				=> 'Video Höhe',
+	'ACP_VIDEO_HEIGHT_EXPLAIN'		=> 'Gebe die Video Höhe ein',
+	'ACP_VIDEO_WIDTH'				=> 'Video Breite',
+	'ACP_VIDEO_WIDTH_EXPLAIN'		=> 'Gebe die Video Breite ein',
+	'ACP_VERSION_CURRENT'			=> 'Version',
+	'ACP_GOOGLE_KEY'				=> 'Google Public API key',
+	'ACP_GOOGLE_KEY_EXPLAIN'		=> 'Um die Video Gallerie zu verwenden, ist es erforderlich <strong>Google Public API key</strong> zu bekommen. Besuche <strong><a href="https://console.developers.google.com/">Google Developers Console</a></strong> und erhalte einen Schlüssel. Wenn Du ein Problem bekommen solltest, um einen Schlüssel zu erzeugen, lese die Anweisung <strong><a href="https://developers.google.com/console/help/new/#generatingdevkeys">Google Developers Console Help: API keys</a></strong>. Sofern Du keinen Schlüssel hinzugefügt hast, wird die Galerie nicht zur Verfügung stehen.',
+	'ACP_VIDEOS_PER_PAGE'			=> 'Videos auf der Seite',
+	'ACP_COMMENTS_PER_PAGE'			=> 'Kommentare auf der Seite',
+	'ACP_COMMENTS_PER_PAGE_EXPLAIN'	=> '<em>Standardmässig sind 10 Kommentare</em>.',
+	'ACP_ENABLE_COMMENTS'			=> 'Kommentare aktivieren',
+	'ACP_ENABLE_COMMENTS_EXPLAIN'	=> 'Zeige Kommentare zum Video und die Möglichkeit, Kommentare hinzuzufügen.',
+	'ACP_ENABLE_VIDEO_STATICS_ON_INDEX'	=> 'Statistik aktivieren',
+	'ACP_ENABLE_VIDEO_STATICS_ON_INDEX_EXPLAIN'	=> 'Aktivierung der Statistik Video Galerie auf der Hauptseite.<br /><p class="error">Diese Option fügt 4 Verweise in die Base!</p>',
+
+	// ACP Categories
+	'ACP_CATEGORY_CREATED'			=> 'Diese Kategorie wurde erfolgreich hinzugefügt.',
+	'ACP_CATEGORY_DELETE'			=> 'Bist Du sicher, dass Du diese Kategorie löschen willst?',
+	'ACP_CATEGORY_DELETED'			=> 'Diese Kategorie wurde erfolgreich gelöscht',
+	'ACP_CATEGORY_EDIT'				=> 'Kategorie bearbeiten',
+	'ACP_CATEGORY_UPDATED'			=> 'Diese Kategorie wurde erfolgreich aktualisiert!',
+	'ACP_VIDEO_CAT_ADD'				=> 'Neue Kategorie hinzufügen',
+	'ACP_VIDEO_CAT_TITLE'			=> 'Kategorie Titel',
+	'ACP_VIDEO_CAT_TITLE_EXPLAIN'	=> '',
+	'ACP_VIDEO_CAT_TITLE_TITLE'		=> 'Du musst einen <strong>Titel</strong> für diese Kategorie angeben.',
+	'ACP_VIDEO_OVERVIEW'			=> 'Video Kategorien',
+	'ACP_VIDEO_OVERVIEW_EXPLAIN'	=> 'Hier kannst Du die Video Kategorien des Boards verwalten.',
+	'ACP_VIDEO_TITLE'				=> 'Video Titel',
+	'ACP_VIDEO_TITLE_EXPLAIN'		=> '',
+	'ACP_TITLE_DELETE'				=> 'Wirklich diesen Titel löschen?',
+	'ACP_TITLE_DELETED'				=> 'Titel erfolgreich entfernt',
+
+	// Install
+	'INSTALL_TEST_CAT'	=> 'Unkategorisiert',
+
+	// Permissions
+	'ACL_U_VIDEO_VIEW_FULL'			=> 'Kann die Video-Galerie sehen',
+	'ACL_U_VIDEO_VIEW'				=> 'Kann Videos ansehen',
+	'ACL_U_VIDEO_DELETE'			=> 'Kann Videos löschen',
+	'ACL_U_VIDEO_POST'				=> 'Kann Videos hinzufügen',
+	'ACL_U_VIDEO_COMMENT'			=> 'Kann Kommentare zu den Videos hinzufügen',
+	'ACL_U_VIDEO_COMMENT_DELETE'	=> 'Kann eigene Kommentare löschen',
+
+	// View Video
+	'FLASH_IS_OFF'			=> '[flash] ist <em>AUS</em>',
+	'FLASH_IS_ON'			=> '[flash] ist <em>AN</em>',
+	'VIDEO_ADD_BY'			=> 'Hinzugefügt von',
+	'VIDEO_BBCODE'			=> 'BBcode',
+	'VIDEO_EMBED'			=> 'Video Einbetten',
+	'VIDEO_LINK'			=> 'Video Link',
+	'VIDEO_LINKS'			=> 'Links',
+	'VIDEO_LINK_YOUTUBE'	=> 'Youtube Video Link',
+	'VIDEO_VIEWS'			=> 'Ansichten',
+
+	// Youtube video text
+	'VIDEO_AUTHOR'			=> 'Author',
+	'VIDEO_WATCH'			=> 'Auf Youtube ansehen',
+
+	//Pagination
+	'LIST_VIDEO'			=> '1 Video',
+	'LIST_VIDEOS'			=> '%1$s Videos',
+	'LIST_COMMENT'			=> '1 Kommentar',
+	'LIST_COMMENTS'			=> '%1$s Kommentare',
+));
